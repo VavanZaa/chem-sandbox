@@ -1,0 +1,53 @@
+{
+  "dataset_id": "post_discovery_strecker_validation_v1",
+  "compiled": "2026-09-23",
+  "access_policy": "Load only after a product-agnostic discovery artifact has been serialized and hashed.",
+  "reference_temperature_K": 298.15,
+  "formation_equilibria": {
+    "NCC#N": {
+      "candidate_name": "aminoacetonitrile",
+      "reactants": ["CH2O", "NH3", "HCN"],
+      "equilibrium_constant_M_minus_2": 10000000.0,
+      "source": "https://doi.org/10.1002/poc.610081105",
+      "secondary_value_source": "https://etheses.dur.ac.uk/4972/1/4972_2422.PDF",
+      "note": "Equilibrium value at 25 C; no temperature extrapolation is supplied."
+    }
+  },
+  "hydrolysis_sensitivity": {
+    "NCC#N": {
+      "candidate_product_smiles": "NCC(=O)O",
+      "candidate_product_name": "glycine",
+      "rate_s_inv": 5.82e-8,
+      "standard_uncertainty_s_inv": 2.51e-8,
+      "temperature_K": 294.15,
+      "ammonia_weight_percent": 15.0,
+      "source": "https://doi.org/10.1021/acsearthspacechem.4c00114",
+      "note": "Experimental first-order fit for aminoacetonitrile hydrolysis at 21 C in 15 wt% ammonia. Use outside those conditions only as an explicitly labelled sensitivity scenario."
+    },
+    "C[C@H](N)C#N": {
+      "candidate_product_smiles": "C[C@H](N)C(=O)O",
+      "candidate_product_name": "S-alanine",
+      "rate_s_inv": 1.13e-7,
+      "standard_uncertainty_s_inv": 1.1e-8,
+      "temperature_K": 294.15,
+      "ammonia_weight_percent": 15.0,
+      "source": "https://doi.org/10.1021/acsearthspacechem.4c00114",
+      "note": "Experimental 2-aminopropanenitrile fit; the cited study did not provide an enantioselective environment."
+    },
+    "C[C@@H](N)C#N": {
+      "candidate_product_smiles": "C[C@@H](N)C(=O)O",
+      "candidate_product_name": "R-alanine",
+      "rate_s_inv": 1.13e-7,
+      "standard_uncertainty_s_inv": 1.1e-8,
+      "temperature_K": 294.15,
+      "ammonia_weight_percent": 15.0,
+      "source": "https://doi.org/10.1021/acsearthspacechem.4c00114",
+      "note": "Experimental 2-aminopropanenitrile fit; the cited study did not provide an enantioselective environment."
+    }
+  },
+  "benchmark_sources_excluded_from_calculation": [
+    "https://doi.org/10.1126/science.117.3046.528",
+    "https://doi.org/10.1016/0006-3002(57)90366-9"
+  ],
+  "scope_note": "The historical Miller-Urey product list and yields are evaluation-only and are not used to generate structures, choose formulas, set source terms, or fit rates."
+}

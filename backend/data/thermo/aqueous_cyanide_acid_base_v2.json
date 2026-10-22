@@ -1,0 +1,51 @@
+{
+  "dataset_id": "reviewed_hcn_nh4_carbonate_water_equilibria_2026-09-23",
+  "reference_temperature_K": 298.15,
+  "applicability_temperature_K": [273.15, 373.15],
+  "hcn": {
+    "preferred_pKa_298_15K": 9.21,
+    "preferred_pKa_uncertainty": 0.02,
+    "ln_Ka_temperature_fit": {
+      "constant": -12.1960,
+      "linear_T": -0.031482,
+      "ln_T": 3.7658,
+      "inverse_T": -6340.7
+    },
+    "temperature_fit_anchor": "Use the reviewed fit only for its temperature trend, anchored to the separately preferred 298.15 K pKa; the fit alone gives pKa 9.29 at 298.15 K.",
+    "source": "https://doi.org/10.1021/cr0780098"
+  },
+  "ammonium": {
+    "pKa_298_15K": 9.245,
+    "dissociation_enthalpy_J_mol": 51950.0,
+    "dissociation_heat_capacity_J_mol_K": 8.0,
+    "source": "https://www.nist.gov/system/files/documents/srd/jpcrd615.pdf",
+    "extended_temperature_evidence": "https://doi.org/10.1016/0021-9614(75)90183-4",
+    "extended_temperature_note": "The constant-heat-capacity extrapolation from the 298.15 K selected values is approximate above 323.15 K; direct enthalpy measurements were reported from 278 to 418 K."
+  },
+  "carbonate": {
+    "neutral_pool": "dissolved CO2 plus hydrated H2CO3, represented together as CO2(aq)",
+    "first_pKa_298_15K": 6.351,
+    "first_dissociation_enthalpy_J_mol": 9150.0,
+    "first_dissociation_heat_capacity_J_mol_K": -371.0,
+    "second_pKa_298_15K": 10.329,
+    "second_dissociation_enthalpy_J_mol": 14700.0,
+    "second_dissociation_heat_capacity_J_mol_K": -249.0,
+    "source": "https://www.nist.gov/system/files/documents/srd/jpcrd615.pdf",
+    "temperature_note": "The selected pKa, enthalpy and heat-capacity values are at 298.15 K and infinite dilution. Constant-heat-capacity temperature extrapolation to the boiler is approximate; CO2 hydration is assumed equilibrated."
+  },
+  "water": {
+    "ionization_model": "IAPWS R11-24 equations 2-4 with liquid-water density",
+    "alpha": [-0.702132, 8681.05, -24145.1],
+    "beta": [0.813876, -51.4471, -0.469920],
+    "coordination_number": 6,
+    "molar_mass_g_mol": 18.015268,
+    "verification_pKw_300K_1g_cm3": 13.906672,
+    "source": "https://iapws.org/technical-guidance/release/Ionization.download"
+  },
+  "limitations": [
+    "Ideal dilute activities and no external buffer, strong ions, other aqueous acid-base pairs or aqueous kinetic reactions are assumed.",
+    "CO2(aq) and H2CO3 are lumped into the neutral CO2 pool; their hydration is assumed equilibrated at the substep boundary.",
+    "This dataset supplies equilibrium constants only, not a calibrated pH, gas-water mass-transfer rate or kinetic yield model.",
+    "Above 323.15 K, the ammonium and carbonate pKa temperature adjustments use constant-heat-capacity extrapolation and are not directly validated at the boiler temperature."
+  ]
+}

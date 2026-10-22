@@ -1,0 +1,51 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "chem-sandbox"
+version = "0.26.0"
+description = "Evidence-gated molecular discovery, reaction operations, catalysis, process flowsheets, and post-run validation"
+requires-python = ">=3.10"
+dependencies = [
+  "ase>=3.24,<4",
+  "aimnet[ase]>=0.2,<0.3",
+  "bolos==0.2",
+  "cantera>=3.2,<3.3",
+  "fastapi>=0.115,<1",
+  "idaes-pse>=2.13,<3",
+  "mace-torch>=0.3.14,<0.4",
+  "libroadrunner==2.10.0",
+  "networkx>=3.4,<4",
+  "numpy>=1.26,<3",
+  "pint>=0.24.1,<1",
+  "pydantic>=2.10,<3",
+  "PyYAML>=6,<7",
+  "python-libsbml==5.21.2",
+  "rdkit>=2025.9,<2027",
+  "scipy>=1.13,<2",
+  "thermo>=0.6,<0.7",
+  "torch>=2.6,<2.14",
+  "torchani>=2.9,<3",
+  "triton-windows==3.6.0.post26; platform_system == 'Windows'",
+  "uvicorn[standard]>=0.34,<1",
+]
+
+[project.optional-dependencies]
+reference-import = [
+  "pypdf>=6,<7",
+]
+test = [
+  "httpx>=0.28,<1",
+  "pytest>=8.3,<9",
+  "pytest-asyncio>=0.25,<1",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["backend"]
+testpaths = ["backend/tests"]
+addopts = "-q"
+
+[tool.setuptools.packages.find]
+where = ["backend"]
+include = ["app*"]

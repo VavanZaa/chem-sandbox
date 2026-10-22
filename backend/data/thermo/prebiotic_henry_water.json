@@ -1,0 +1,62 @@
+{
+  "dataset_id": "sander_nist_henry_prebiotic_subset_v3",
+  "reference_temperature_K": 298.15,
+  "definition": "kH_pc in mol/(kg water bar); kH(T)=kH0*exp(B*(1/T-1/298.15K))",
+  "compiled": "2026-09-23",
+  "entries": {
+    "NH3": {
+      "name": "ammonia",
+      "cas": "7664-41-7",
+      "kH0_mol_kg_bar": 61.0,
+      "temperature_dependence_K": 4200.0,
+      "selection": "NIST literature-review entry for neutral dissolved NH3; NH4+ is speciated separately after transfer",
+      "source": "https://webbook.nist.gov/cgi/cbook.cgi?ID=C7664417&Mask=10",
+      "temperature_note": "The exponential temperature form is extrapolated toward the boiling compartment; quantitative high-temperature partition is not validated."
+    },
+    "CO2": {
+      "name": "carbon dioxide",
+      "cas": "124-38-9",
+      "kH0_mol_kg_bar": 0.035,
+      "temperature_dependence_K": 2400.0,
+      "selection": "NIST literature-review entry; neutral dissolved CO2 plus hydrated carbonic acid pool is speciated separately after transfer",
+      "source": "https://webbook.nist.gov/cgi/cbook.cgi?ID=C124389&Mask=10",
+      "temperature_note": "The exponential temperature form is extrapolated toward the boiling compartment; do not treat its high-temperature value as measured."
+    },
+    "HCN": {
+      "name": "hydrogen cyanide",
+      "cas": "74-90-8",
+      "kH0_mol_kg_bar": 12.0,
+      "temperature_dependence_K": 5000.0,
+      "selection": "NIST literature-review entry",
+      "source": "https://webbook.nist.gov/cgi/cbook.cgi?ID=C74908&Mask=10"
+    },
+    "CH2O": {
+      "name": "formaldehyde",
+      "cas": "50-00-0",
+      "kH0_mol_kg_bar": 3000.0,
+      "temperature_dependence_K": 7200.0,
+      "selection": "effective value near the measured Betterton-Hoffmann/Sander entries; not an intrinsic free-CH2O Henry constant",
+      "source": "https://henry.mpch-mainz.gwdg.de/henry/casrn/50-00-0",
+      "aqueous_pool_definition": "effective_total_unhydrated_formaldehyde_plus_methanediol",
+      "free_molecular_transfer_valid": false,
+      "source_note": "Sander 2023 methanal note 457 defines the effective solubility as ([HCHO]+[CH2(OH)2])/p(HCHO). Treating this pool as free aqueous CH2O omits explicit hydration and is not a validated kinetic model."
+    },
+    "CH3CHO": {
+      "name": "acetaldehyde",
+      "cas": "75-07-0",
+      "kH0_mol_kg_bar": 14.0,
+      "temperature_dependence_K": 5600.0,
+      "selection": "NIST literature-review entry",
+      "source": "https://webbook.nist.gov/cgi/cbook.cgi?ID=C75070&Mask=459"
+    },
+    "CH3OH": {
+      "name": "methanol",
+      "cas": "67-56-1",
+      "kH0_mol_kg_bar": 220.0,
+      "temperature_dependence_K": 5200.0,
+      "selection": "NIST measured entry",
+      "source": "https://webbook.nist.gov/cgi/cbook.cgi?ID=C67561&Mask=10"
+    }
+  },
+  "scope_note": "This property subset is independent of any Miller-Urey product benchmark. Species without an entry remain in their existing compartment."
+}

@@ -1,0 +1,22 @@
+{
+  "dataset_id": "schlesinger_miller_1973_glycolonitrile_equilibrium_v1",
+  "source": "https://doi.org/10.1021/ja00792a043",
+  "source_type": "primary_measured_aqueous_equilibrium",
+  "reaction": "HOCH2CN(aq) <-> aqueous formaldehyde pool + HCN(aq)",
+  "log10_dissociation_K_M": {
+    "intercept": 1.66,
+    "inverse_temperature_K": -2184.0
+  },
+  "temperature_K": {
+    "minimum": 298.15,
+    "maximum": 343.15
+  },
+  "equilibrium_formaldehyde_basis": "Aqueous formaldehyde pool, predominantly hydrated; distinguished from unhydrated formaldehyde in the original paper's page-3731 reaction-enthalpy discussion and page-3734 equilibrium definitions. Basis checked against indexed OCR of the original paper; the PDF itself could not be rendered for independent visual verification.",
+  "association_rate_CN_minus_plus_unhydrated_formaldehyde": {
+    "k2_298_15K_M_inv_s": 350000.0,
+    "temperature_K": {"minimum": 298.15, "maximum": 318.15},
+    "pH": {"minimum": 3.8, "maximum": 4.7},
+    "rate_note": "Measured in dilute acetate-buffered aqueous solution; first order in CN- and unhydrated formaldehyde. Only the 298.15 K value is used in the current endpoint timescale screen."
+  },
+  "validation_use": "Read-only, fixed-pH and fixed-volume endpoint equilibrium potential plus a separate constant-endpoint-state, one-way association timescale. Neither is a coupled reactor yield correction or bound on integrated HCN production. Assay values are absent."
+}

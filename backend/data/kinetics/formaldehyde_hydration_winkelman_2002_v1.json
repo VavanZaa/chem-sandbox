@@ -1,0 +1,13 @@
+{
+  "dataset_id": "winkelman_2002_formaldehyde_hydration_v1",
+  "reaction": "CH2O(aq) + H2O(l) <-> CH2(OH)2(aq)",
+  "source": "https://doi.org/10.1016/S0009-2509(02)00358-5",
+  "source_type": "primary_measured_absorption_with_transfer_model",
+  "temperature_K": {"minimum": 293.0, "maximum": 333.0},
+  "pH": {"minimum": 5.0, "maximum": 7.0},
+  "hydration_rate_per_s": {"prefactor": 204000.0, "inverse_temperature_K": 2936.0},
+  "hydration_equilibrium_ratio": {"inverse_temperature_K": 3769.0, "log_intercept": -5.494},
+  "hydration_enthalpy_basis": "Van't Hoff slope of equilibrium Eq. 24: delta_H = -R * 3769 K, reported as -31.4 kJ/mol in the primary study",
+  "model_scope": "Pseudo-first-order aqueous hydration in excess water; k_d=k_h/K_h. The equilibrium slope supplies a partial hydration enthalpy, but no gas-water kLa, interface enhancement, acid/base extrapolation, heat capacity, or apparatus heat flow.",
+  "validation_use": "Known HCN amounts are absent. Rates may be used only within the reported temperature and pH domain unless extrapolation is explicitly labeled."
+}

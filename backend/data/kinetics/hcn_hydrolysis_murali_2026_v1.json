@@ -1,0 +1,28 @@
+{
+  "dataset_id": "murali_white_rimmer_2026_pure_water_hcn_hydrolysis",
+  "source": "https://arxiv.org/pdf/2608.00025",
+  "primary_data": "https://doi.org/10.7910/DVN/WT6NKZ",
+  "status": "2026 experimental preprint; pure-water rate-parameter screening, not calibrated for Barth reactor salts or pH",
+  "reuse_note": "Only a few attributed numerical rate parameters are transcribed for this audit; the paper and primary data archive are linked, not redistributed.",
+  "reference_temperature_K": 273.15,
+  "screen_temperature_K": [293.15, 323.15],
+  "acid": {
+    "ln_k_at_reference_M_inv_s_inv": -12.7,
+    "activation_energy_J_mol_from_table_1": 60000,
+    "sigma_ln_k_conservative": 1.12
+  },
+  "base": {
+    "ln_k_at_reference_M_inv_s_inv": -9.0,
+    "activation_energy_J_mol_from_table_1": 89500,
+    "sigma_ln_k_conservative": 1.27
+  },
+  "source_discrepancy": "The abstract states 67.1 kJ/mol for the acid activation energy while Table 1 states 60.0 kJ/mol. This screen uses the detailed Table 1 value and reports the abstract value as a separate sensitivity, not a resolved correction.",
+  "abstract_acid_activation_energy_J_mol": 67100,
+  "kinetic_equation": "d[HCN+CN-]/dt = -(k_acid[H+] + k_base[OH-])[HCN], with fast ideal HCN/CN- speciation at each reported step",
+  "limitations": [
+    "Read-only right-endpoint quadrature; within-step arrival and pH changes are not resolved.",
+    "The published rate fit used formate accumulation as a proxy and assumes rapid subsequent formamide hydrolysis.",
+    "Rate-only ranges do not include pH, salt, transport, gas-source, or parameter-covariance uncertainty.",
+    "The calculation never injects hydrolysis products or changes the apparatus material or thermal ledger."
+  ]
+}
